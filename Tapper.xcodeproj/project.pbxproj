@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		CC8D776423E9FD5500E2F3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */; };
 		CC8D776623E9FD5500E2F3A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */; };
-		CC8D776823E9FD5500E2F3A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776723E9FD5500E2F3A5 /* ViewController.swift */; };
+		CC8D776823E9FD5500E2F3A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776723E9FD5500E2F3A5 /* MainViewController.swift */; };
 		CC8D776D23E9FD5700E2F3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */; };
 		CC8D777023E9FD5700E2F3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D776E23E9FD5700E2F3A5 /* LaunchScreen.storyboard */; };
 		CC8D777B23E9FD5700E2F3A5 /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D777A23E9FD5700E2F3A5 /* TapperTests.swift */; };
+		CC8D778623EA04D900E2F3A5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D778523EA04D900E2F3A5 /* Router.swift */; };
+		CC8D778823EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D778723EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift */; };
+		CC8D778E23EA0AC800E2F3A5 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D778D23EA0AC800E2F3A5 /* MainPresenter.swift */; };
+		CC8D779023EA0BDF00E2F3A5 /* MainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D778F23EA0BDF00E2F3A5 /* MainViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		CC8D776023E9FD5500E2F3A5 /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC8D776723E9FD5500E2F3A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC8D776723E9FD5500E2F3A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC8D776F23E9FD5700E2F3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC8D777123E9FD5700E2F3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC8D777623E9FD5700E2F3A5 /* TapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D777A23E9FD5700E2F3A5 /* TapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperTests.swift; sourceTree = "<group>"; };
 		CC8D777C23E9FD5700E2F3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8D778523EA04D900E2F3A5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CC8D778723EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
+		CC8D778D23EA0AC800E2F3A5 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CC8D778F23EA0BDF00E2F3A5 /* MainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +87,9 @@
 			children = (
 				CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */,
 				CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */,
-				CC8D776723E9FD5500E2F3A5 /* ViewController.swift */,
+				CC8D778523EA04D900E2F3A5 /* Router.swift */,
+				CC8D778723EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift */,
+				CC8D778923EA08E300E2F3A5 /* Modules */,
 				CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */,
 				CC8D776E23E9FD5700E2F3A5 /* LaunchScreen.storyboard */,
 				CC8D777123E9FD5700E2F3A5 /* Info.plist */,
@@ -94,6 +104,40 @@
 				CC8D777C23E9FD5700E2F3A5 /* Info.plist */,
 			);
 			path = TapperTests;
+			sourceTree = "<group>";
+		};
+		CC8D778923EA08E300E2F3A5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D778A23EA08F300E2F3A5 /* MainModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CC8D778A23EA08F300E2F3A5 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D778B23EA090400E2F3A5 /* View */,
+				CC8D778C23EA090F00E2F3A5 /* Presenter */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		CC8D778B23EA090400E2F3A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D778F23EA0BDF00E2F3A5 /* MainViews.swift */,
+				CC8D776723E9FD5500E2F3A5 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC8D778C23EA090F00E2F3A5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D778D23EA0AC800E2F3A5 /* MainPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8D776823E9FD5500E2F3A5 /* ViewController.swift in Sources */,
+				CC8D779023EA0BDF00E2F3A5 /* MainViews.swift in Sources */,
+				CC8D778623EA04D900E2F3A5 /* Router.swift in Sources */,
+				CC8D778E23EA0AC800E2F3A5 /* MainPresenter.swift in Sources */,
+				CC8D778823EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift in Sources */,
+				CC8D776823E9FD5500E2F3A5 /* MainViewController.swift in Sources */,
 				CC8D776423E9FD5500E2F3A5 /* AppDelegate.swift in Sources */,
 				CC8D776623E9FD5500E2F3A5 /* SceneDelegate.swift in Sources */,
 			);
