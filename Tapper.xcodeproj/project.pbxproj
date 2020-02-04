@@ -10,7 +10,6 @@
 		CC8D776423E9FD5500E2F3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */; };
 		CC8D776623E9FD5500E2F3A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */; };
 		CC8D776823E9FD5500E2F3A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776723E9FD5500E2F3A5 /* ViewController.swift */; };
-		CC8D776B23E9FD5500E2F3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D776923E9FD5500E2F3A5 /* Main.storyboard */; };
 		CC8D776D23E9FD5700E2F3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */; };
 		CC8D777023E9FD5700E2F3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D776E23E9FD5700E2F3A5 /* LaunchScreen.storyboard */; };
 		CC8D777B23E9FD5700E2F3A5 /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D777A23E9FD5700E2F3A5 /* TapperTests.swift */; };
@@ -31,7 +30,6 @@
 		CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC8D776723E9FD5500E2F3A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC8D776A23E9FD5500E2F3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC8D776F23E9FD5700E2F3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC8D777123E9FD5700E2F3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */,
 				CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */,
 				CC8D776723E9FD5500E2F3A5 /* ViewController.swift */,
-				CC8D776923E9FD5500E2F3A5 /* Main.storyboard */,
 				CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */,
 				CC8D776E23E9FD5700E2F3A5 /* LaunchScreen.storyboard */,
 				CC8D777123E9FD5700E2F3A5 /* Info.plist */,
@@ -182,7 +179,6 @@
 			files = (
 				CC8D777023E9FD5700E2F3A5 /* LaunchScreen.storyboard in Resources */,
 				CC8D776D23E9FD5700E2F3A5 /* Assets.xcassets in Resources */,
-				CC8D776B23E9FD5500E2F3A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +221,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CC8D776923E9FD5500E2F3A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC8D776A23E9FD5500E2F3A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC8D776E23E9FD5700E2F3A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49CTYF44YS;
 				INFOPLIST_FILE = Tapper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.artyukhinrodion.Tapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,6 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49CTYF44YS;
 				INFOPLIST_FILE = Tapper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.artyukhinrodion.Tapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
