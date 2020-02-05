@@ -15,6 +15,7 @@ protocol RouterMain {
 
 protocol RouterProtocol: RouterMain {
   func mainViewController()
+  func playViewController()
 }
 
 class Router: RouterProtocol {
@@ -30,6 +31,13 @@ class Router: RouterProtocol {
     if let navigationController = navigationController {
       guard let mainViewController = assemblyBuilder?.createMainModule(router: self) else { return }
       navigationController.viewControllers = [mainViewController]
+    }
+  }
+  
+  func playViewController() {
+    if let navigationController = navigationController {
+      guard let playViewController = assemblyBuilder?.createPlayModule(router: self) else { return }
+      navigationController.pushViewController(playViewController, animated: true)
     }
   }
 }

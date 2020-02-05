@@ -14,6 +14,15 @@ class MainViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupLayout()
+    setupActions()
   }
+  
 }
 
+// MARK: - Actions
+extension MainViewController {
+  @objc func showPlayScreen() {
+    presenter.showPlayScreen()
+  }
+}

@@ -17,6 +17,20 @@
 		CC8D778823EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D778723EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift */; };
 		CC8D778E23EA0AC800E2F3A5 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D778D23EA0AC800E2F3A5 /* MainPresenter.swift */; };
 		CC8D779023EA0BDF00E2F3A5 /* MainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D778F23EA0BDF00E2F3A5 /* MainViews.swift */; };
+		CC8D779423EA0CE400E2F3A5 /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D779323EA0CE400E2F3A5 /* ViewsFactory.swift */; };
+		CC8D779623EA0D8800E2F3A5 /* ImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D779523EA0D8800E2F3A5 /* ImageViews.swift */; };
+		CC8D779823EA11F000E2F3A5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D779723EA11F000E2F3A5 /* Buttons.swift */; };
+		CC8D779B23EA16E600E2F3A5 /* ButtonWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D779A23EA16E600E2F3A5 /* ButtonWithTitle.swift */; };
+		CC8D779E23EA177600E2F3A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D779D23EA177600E2F3A5 /* Extensions.swift */; };
+		CC8D77A023EA17C300E2F3A5 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D779F23EA17C300E2F3A5 /* ViewHelpers.swift */; };
+		CC8D77A223EA188500E2F3A5 /* Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D77A123EA188500E2F3A5 /* Containers.swift */; };
+		CC8D77A423EA19A000E2F3A5 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D77A323EA19A000E2F3A5 /* Labels.swift */; };
+		CC8D77AA23EA1A7200E2F3A5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D77A923EA1A7200E2F3A5 /* Fonts.swift */; };
+		CC8D77AC23EA1B4000E2F3A5 /* MullerExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CC8D77AB23EA1B4000E2F3A5 /* MullerExtraBold.otf */; };
+		CC9A29AD23EA2ADC00E87BEE /* StackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A29AC23EA2ADC00E87BEE /* StackViews.swift */; };
+		CCA2B06E23EAF9020009F064 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B06D23EAF9020009F064 /* PlayViewController.swift */; };
+		CCA2B07023EAF9770009F064 /* PlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B06F23EAF9770009F064 /* PlayPresenter.swift */; };
+		CCA2B07223EAFB220009F064 /* PlayViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B07123EAFB220009F064 /* PlayViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +58,20 @@
 		CC8D778723EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		CC8D778D23EA0AC800E2F3A5 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		CC8D778F23EA0BDF00E2F3A5 /* MainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViews.swift; sourceTree = "<group>"; };
+		CC8D779323EA0CE400E2F3A5 /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
+		CC8D779523EA0D8800E2F3A5 /* ImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViews.swift; sourceTree = "<group>"; };
+		CC8D779723EA11F000E2F3A5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		CC8D779A23EA16E600E2F3A5 /* ButtonWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithTitle.swift; sourceTree = "<group>"; };
+		CC8D779D23EA177600E2F3A5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CC8D779F23EA17C300E2F3A5 /* ViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
+		CC8D77A123EA188500E2F3A5 /* Containers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containers.swift; sourceTree = "<group>"; };
+		CC8D77A323EA19A000E2F3A5 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		CC8D77A923EA1A7200E2F3A5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		CC8D77AB23EA1B4000E2F3A5 /* MullerExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MullerExtraBold.otf; sourceTree = "<group>"; };
+		CC9A29AC23EA2ADC00E87BEE /* StackViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViews.swift; sourceTree = "<group>"; };
+		CCA2B06D23EAF9020009F064 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		CCA2B06F23EAF9770009F064 /* PlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPresenter.swift; sourceTree = "<group>"; };
+		CCA2B07123EAFB220009F064 /* PlayViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +117,8 @@
 				CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */,
 				CC8D778523EA04D900E2F3A5 /* Router.swift */,
 				CC8D778723EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift */,
+				CC8D779C23EA176500E2F3A5 /* Helpers */,
+				CC8D779123EA0CAD00E2F3A5 /* Views */,
 				CC8D778923EA08E300E2F3A5 /* Modules */,
 				CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */,
 				CC8D776E23E9FD5700E2F3A5 /* LaunchScreen.storyboard */,
@@ -110,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CC8D778A23EA08F300E2F3A5 /* MainModule */,
+				CCA2B06A23EAF8D80009F064 /* PlayModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -136,6 +167,105 @@
 			isa = PBXGroup;
 			children = (
 				CC8D778D23EA0AC800E2F3A5 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC8D779123EA0CAD00E2F3A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D779323EA0CE400E2F3A5 /* ViewsFactory.swift */,
+				CC8D77A723EA19C800E2F3A5 /* Labels */,
+				CC8D779923EA16CD00E2F3A5 /* Buttons */,
+				CC8D77A623EA19B800E2F3A5 /* ImageViews */,
+				CC8D77A523EA19B000E2F3A5 /* Containers */,
+				CC9A29AB23EA2AC700E87BEE /* StackViews */,
+				CC8D77A823EA19D700E2F3A5 /* Fonts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC8D779923EA16CD00E2F3A5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D779723EA11F000E2F3A5 /* Buttons.swift */,
+				CC8D779A23EA16E600E2F3A5 /* ButtonWithTitle.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		CC8D779C23EA176500E2F3A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D779D23EA177600E2F3A5 /* Extensions.swift */,
+				CC8D779F23EA17C300E2F3A5 /* ViewHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CC8D77A523EA19B000E2F3A5 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D77A123EA188500E2F3A5 /* Containers.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		CC8D77A623EA19B800E2F3A5 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D779523EA0D8800E2F3A5 /* ImageViews.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		CC8D77A723EA19C800E2F3A5 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D77A323EA19A000E2F3A5 /* Labels.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		CC8D77A823EA19D700E2F3A5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D77A923EA1A7200E2F3A5 /* Fonts.swift */,
+				CC8D77AB23EA1B4000E2F3A5 /* MullerExtraBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CC9A29AB23EA2AC700E87BEE /* StackViews */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A29AC23EA2ADC00E87BEE /* StackViews.swift */,
+			);
+			path = StackViews;
+			sourceTree = "<group>";
+		};
+		CCA2B06A23EAF8D80009F064 /* PlayModule */ = {
+			isa = PBXGroup;
+			children = (
+				CCA2B06B23EAF8E60009F064 /* View */,
+				CCA2B06C23EAF8EC0009F064 /* Presenter */,
+			);
+			path = PlayModule;
+			sourceTree = "<group>";
+		};
+		CCA2B06B23EAF8E60009F064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCA2B07123EAFB220009F064 /* PlayViews.swift */,
+				CCA2B06D23EAF9020009F064 /* PlayViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCA2B06C23EAF8EC0009F064 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCA2B06F23EAF9770009F064 /* PlayPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -221,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8D77AC23EA1B4000E2F3A5 /* MullerExtraBold.otf in Resources */,
 				CC8D777023E9FD5700E2F3A5 /* LaunchScreen.storyboard in Resources */,
 				CC8D776D23E9FD5700E2F3A5 /* Assets.xcassets in Resources */,
 			);
@@ -240,13 +371,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8D77AA23EA1A7200E2F3A5 /* Fonts.swift in Sources */,
 				CC8D779023EA0BDF00E2F3A5 /* MainViews.swift in Sources */,
 				CC8D778623EA04D900E2F3A5 /* Router.swift in Sources */,
+				CC8D77A023EA17C300E2F3A5 /* ViewHelpers.swift in Sources */,
 				CC8D778E23EA0AC800E2F3A5 /* MainPresenter.swift in Sources */,
+				CC8D779423EA0CE400E2F3A5 /* ViewsFactory.swift in Sources */,
+				CC8D77A223EA188500E2F3A5 /* Containers.swift in Sources */,
 				CC8D778823EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift in Sources */,
+				CC8D779B23EA16E600E2F3A5 /* ButtonWithTitle.swift in Sources */,
+				CC8D779823EA11F000E2F3A5 /* Buttons.swift in Sources */,
+				CCA2B06E23EAF9020009F064 /* PlayViewController.swift in Sources */,
+				CC8D779E23EA177600E2F3A5 /* Extensions.swift in Sources */,
+				CC8D779623EA0D8800E2F3A5 /* ImageViews.swift in Sources */,
+				CC8D77A423EA19A000E2F3A5 /* Labels.swift in Sources */,
 				CC8D776823E9FD5500E2F3A5 /* MainViewController.swift in Sources */,
 				CC8D776423E9FD5500E2F3A5 /* AppDelegate.swift in Sources */,
+				CCA2B07023EAF9770009F064 /* PlayPresenter.swift in Sources */,
 				CC8D776623E9FD5500E2F3A5 /* SceneDelegate.swift in Sources */,
+				CCA2B07223EAFB220009F064 /* PlayViews.swift in Sources */,
+				CC9A29AD23EA2ADC00E87BEE /* StackViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

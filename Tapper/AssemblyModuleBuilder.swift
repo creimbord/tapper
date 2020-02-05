@@ -10,12 +10,20 @@ import UIKit
 
 protocol AssemblyBuilder {
   func createMainModule(router: Router) -> UIViewController
+  func createPlayModule(router: Router) -> UIViewController
 }
 
 class AssemblyModuleBuilder: AssemblyBuilder {
   func createMainModule(router: Router) -> UIViewController {
     let view = MainViewController()
-    let presenter = MainPresenter(view: view, router: router)
+    let presenter = MainPresenter(router: router)
+    view.presenter = presenter
+    return view
+  }
+  
+  func createPlayModule(router: Router) -> UIViewController {
+    let view = PlayViewController()
+    let presenter = PlayPresenter(view: view, router: router)
     view.presenter = presenter
     return view
   }

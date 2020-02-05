@@ -8,20 +8,19 @@
 
 import Foundation
 
-protocol MainViewProtocol: class {
-  func setupLayout()
-}
-
 protocol MainViewPresenterProtocol: class {
-  init(view: MainViewProtocol, router: RouterProtocol)
+  init(router: RouterProtocol)
+  func showPlayScreen()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
-  weak var view: MainViewProtocol?
   var router: RouterProtocol?
   
-  required init(view: MainViewProtocol, router: RouterProtocol) {
-    self.view = view
+  required init(router: RouterProtocol) {
     self.router = router
+  }
+  
+  func showPlayScreen() {
+    router?.playViewController()
   }
 }
