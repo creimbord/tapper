@@ -10,16 +10,19 @@ import UIKit
 
 protocol ViewsFactory {
   static func createLabel(name: Labels, title: String?) -> UILabel
-  static func createButton(name: Buttons, title: String?, image: UIImage?, state: UIControl.State?) -> UIButton
+  static func createButton(name: Buttons, title: String?, image: UIImage?, highlightedImage: UIImage?) -> UIButton
   static func createImageView(name: ImageViews, image: UIImage?) -> UIImageView
   static func createContainer(name: Containers) -> UIView
   static func createStackView(name: StackViews, subviews: [UIView]) -> UIStackView
+  static func createView(name: Views, title: String, boxLabelTitle: String, isFlipped: Bool) -> UIView
 }
 
 class UIFactory: ViewsFactory {
   static func createLabel(name: Labels, title: String?) -> UILabel {
     switch name {
     case .mainButtonLabel: return MainButtonLabel(title: title).getLabel()
+    case .titleLabel: return TitleLabel(title: title).getLabel()
+    case .boxLabel: return BoxLabel(title: title).getLabel()
     }
   }
   
@@ -27,13 +30,16 @@ class UIFactory: ViewsFactory {
     name: Buttons,
     title: String? = nil,
     image: UIImage?,
-    state: UIControl.State? = .normal
+    highlightedImage: UIImage? = nil
   ) -> UIButton {
     switch name {
     case .buttonWithTitle:
       return ButtonWithTitle(title: title, image: image).getButton()
     case .buttonWithImageBackground:
-      return ButtonWithImageBackground(image: image, state: state).getButton()
+      return ButtonWithImageBackground(
+        image: image,
+        highlightedImage: highlightedImage
+      ).getButton()
     }
   }
   
@@ -49,13 +55,24 @@ class UIFactory: ViewsFactory {
     }
   }
   
-  static func createStackView(
-    name: StackViews,
-    subviews: [UIView]
-  ) -> UIStackView {
+  static func createStackView(name: StackViews, subviews: [UIView]) -> UIStackView {
     switch name {
     case .verticalStackView:
       return VerticalStackView(subviews: subviews).getStackView()
+    case .horizontalStackView:
+      return HorizontalStackView(subviews: subviews).getStackView()
+    }
+  }
+  
+  static func createView(
+    name: Views,
+    title: String,
+    boxLabelTitle: String,
+    isFlipped: Bool = false
+  ) -> UIView {
+    switch name {
+    case .labelBox:
+      return LabelBoxView(title: title, boxLabelTitle: boxLabelTitle, isFlipped: isFlipped).getView()
     }
   }
 }

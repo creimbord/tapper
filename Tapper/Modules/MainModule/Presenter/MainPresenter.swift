@@ -8,19 +8,19 @@
 
 import Foundation
 
-protocol MainViewPresenterProtocol: class {
+protocol MainViewPresenterProtocol: AnyObject {
   init(router: RouterProtocol)
   func showPlayScreen()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
-  var router: RouterProtocol?
+  var router: RouterProtocol
   
   required init(router: RouterProtocol) {
     self.router = router
   }
   
   func showPlayScreen() {
-    router?.playViewController()
+    router.playViewController()
   }
 }

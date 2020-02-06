@@ -31,6 +31,10 @@
 		CCA2B06E23EAF9020009F064 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B06D23EAF9020009F064 /* PlayViewController.swift */; };
 		CCA2B07023EAF9770009F064 /* PlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B06F23EAF9770009F064 /* PlayPresenter.swift */; };
 		CCA2B07223EAFB220009F064 /* PlayViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B07123EAFB220009F064 /* PlayViews.swift */; };
+		CCA2B07523EB01E60009F064 /* LabelBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B07423EB01E60009F064 /* LabelBox.swift */; };
+		CCA2B07823EB03EC0009F064 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B07723EB03EC0009F064 /* Colors.swift */; };
+		CCA2B07A23EB1D270009F064 /* ElektraTextPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCA2B07923EB1D270009F064 /* ElektraTextPro.otf */; };
+		CCA2B07C23EB2B8F0009F064 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2B07B23EB2B8F0009F064 /* Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		CCA2B06D23EAF9020009F064 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		CCA2B06F23EAF9770009F064 /* PlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPresenter.swift; sourceTree = "<group>"; };
 		CCA2B07123EAFB220009F064 /* PlayViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViews.swift; sourceTree = "<group>"; };
+		CCA2B07423EB01E60009F064 /* LabelBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBox.swift; sourceTree = "<group>"; };
+		CCA2B07723EB03EC0009F064 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CCA2B07923EB1D270009F064 /* ElektraTextPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ElektraTextPro.otf; sourceTree = "<group>"; };
+		CCA2B07B23EB2B8F0009F064 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +188,9 @@
 				CC8D77A623EA19B800E2F3A5 /* ImageViews */,
 				CC8D77A523EA19B000E2F3A5 /* Containers */,
 				CC9A29AB23EA2AC700E87BEE /* StackViews */,
+				CCA2B07323EB018A0009F064 /* UIViews */,
 				CC8D77A823EA19D700E2F3A5 /* Fonts */,
+				CCA2B07623EB03D40009F064 /* Colors */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +242,7 @@
 			children = (
 				CC8D77A923EA1A7200E2F3A5 /* Fonts.swift */,
 				CC8D77AB23EA1B4000E2F3A5 /* MullerExtraBold.otf */,
+				CCA2B07923EB1D270009F064 /* ElektraTextPro.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -268,6 +279,23 @@
 				CCA2B06F23EAF9770009F064 /* PlayPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CCA2B07323EB018A0009F064 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				CCA2B07B23EB2B8F0009F064 /* Views.swift */,
+				CCA2B07423EB01E60009F064 /* LabelBox.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		CCA2B07623EB03D40009F064 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CCA2B07723EB03EC0009F064 /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8D77AC23EA1B4000E2F3A5 /* MullerExtraBold.otf in Resources */,
+				CCA2B07A23EB1D270009F064 /* ElektraTextPro.otf in Resources */,
 				CC8D777023E9FD5700E2F3A5 /* LaunchScreen.storyboard in Resources */,
 				CC8D776D23E9FD5700E2F3A5 /* Assets.xcassets in Resources */,
 			);
@@ -372,9 +401,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8D77AA23EA1A7200E2F3A5 /* Fonts.swift in Sources */,
+				CCA2B07823EB03EC0009F064 /* Colors.swift in Sources */,
 				CC8D779023EA0BDF00E2F3A5 /* MainViews.swift in Sources */,
 				CC8D778623EA04D900E2F3A5 /* Router.swift in Sources */,
 				CC8D77A023EA17C300E2F3A5 /* ViewHelpers.swift in Sources */,
+				CCA2B07523EB01E60009F064 /* LabelBox.swift in Sources */,
 				CC8D778E23EA0AC800E2F3A5 /* MainPresenter.swift in Sources */,
 				CC8D779423EA0CE400E2F3A5 /* ViewsFactory.swift in Sources */,
 				CC8D77A223EA188500E2F3A5 /* Containers.swift in Sources */,
@@ -387,6 +418,7 @@
 				CC8D77A423EA19A000E2F3A5 /* Labels.swift in Sources */,
 				CC8D776823E9FD5500E2F3A5 /* MainViewController.swift in Sources */,
 				CC8D776423E9FD5500E2F3A5 /* AppDelegate.swift in Sources */,
+				CCA2B07C23EB2B8F0009F064 /* Views.swift in Sources */,
 				CCA2B07023EAF9770009F064 /* PlayPresenter.swift in Sources */,
 				CC8D776623E9FD5500E2F3A5 /* SceneDelegate.swift in Sources */,
 				CCA2B07223EAFB220009F064 /* PlayViews.swift in Sources */,

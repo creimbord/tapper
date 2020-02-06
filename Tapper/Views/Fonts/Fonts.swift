@@ -10,4 +10,6 @@ import UIKit
 
 enum Fonts {
   static let mainButtonFont = UIFont(name: "MullerExtraBold", size: 30)!
+  static let titleLabelFont = UIFont(name: "MullerExtraBold", size: 15)!
+  static let boxLabelFont = UIFont(name: "ElektraTextPro-Bold", size: 50)!
 }

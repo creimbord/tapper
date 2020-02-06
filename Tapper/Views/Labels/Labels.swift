@@ -11,6 +11,8 @@ import UIKit
 // MARK: - Label
 enum Labels {
   case mainButtonLabel
+  case titleLabel
+  case boxLabel
 }
 
 protocol Label {
@@ -30,8 +32,42 @@ class MainButtonLabel: Label {
       title: buttonTitle,
       kern: 2,
       font: Fonts.mainButtonFont,
-      textColor: .white
+      textColor: Colors.mainButtonLabelColor
     )
+  }
+  
+  func getLabel() -> UILabel {
+    return label
+  }
+}
+
+class TitleLabel: Label {
+  private let label = UILabel()
+  
+  init(title: String?) {
+    guard let title = title else { return }
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.textAlignment = .center
+    label.text = NSLocalizedString(title, comment: "Title label.")
+    label.font = Fonts.titleLabelFont
+    label.textColor = Colors.titleLabelColor
+  }
+  
+  func getLabel() -> UILabel {
+    return label
+  }
+}
+
+class BoxLabel: Label {
+  private let label = UILabel()
+  
+  init(title: String?) {
+    guard let title = title else { return }
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.textAlignment = .center
+    label.text = NSLocalizedString(title, comment: "Box label.")
+    label.font = Fonts.boxLabelFont
+    label.textColor = Colors.boxLabelColor
   }
   
   func getLabel() -> UILabel {

@@ -8,17 +8,17 @@
 
 import Foundation
 
-protocol PlayViewProtocol: class {
+protocol PlayViewProtocol: AnyObject {
   func setupLayout()
 }
 
-protocol PlayViewPresenterProtocol: class {
+protocol PlayViewPresenterProtocol: AnyObject {
   init(view: PlayViewProtocol, router: RouterProtocol)
 }
 
 class PlayPresenter: PlayViewPresenterProtocol {
-  weak var view: PlayViewProtocol?
-  var router: RouterProtocol?
+  unowned let view: PlayViewProtocol
+  var router: RouterProtocol
   
   required init(view: PlayViewProtocol, router: RouterProtocol) {
     self.view = view

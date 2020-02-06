@@ -38,9 +38,10 @@ class ButtonWithTitle: Button {
 class ButtonWithImageBackground: Button {
   private let button = UIButton()
   
-  init(image: UIImage?, state: UIControl.State?) {
+  init(image: UIImage?, highlightedImage: UIImage?) {
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setBackgroundImage(image, for: state!)
+    button.setBackgroundImage(image, for: .normal)
+    button.setBackgroundImage(highlightedImage, for: .highlighted)
   }
   
   func getButton() -> UIButton {

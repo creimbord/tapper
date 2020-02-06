@@ -11,6 +11,7 @@ import UIKit
 // MARK: - StackView
 enum StackViews {
   case verticalStackView
+  case horizontalStackView
 }
 
 protocol StackView {
@@ -28,6 +29,22 @@ class VerticalStackView: StackView {
     stackView.axis = .vertical
     stackView.distribution = .fill
     stackView.alignment = .center
+  }
+  
+  func getStackView() -> UIStackView {
+    return stackView
+  }
+}
+
+class HorizontalStackView: StackView {
+  private let stackView = UIStackView()
+  
+  init(subviews: [UIView]) {
+    subviews.forEach { stackView.addArrangedSubview($0) }
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.isUserInteractionEnabled = true
+    stackView.axis = .horizontal
+    stackView.distribution = .equalCentering
   }
   
   func getStackView() -> UIStackView {

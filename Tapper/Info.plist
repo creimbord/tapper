@@ -42,6 +42,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>MullerExtraBold.otf</string>
+		<string>ElektraTextPro.otf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

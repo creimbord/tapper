@@ -48,7 +48,7 @@ extension MainViewController {
 
 // MARK: - Actions
 extension MainViewController {
-  func setupActions() {    
+  func setupActions() {
     MainViews.playButton.addTarget(self, action: #selector(showPlayScreen), for: .touchUpInside)
   }
 }
