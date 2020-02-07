@@ -15,6 +15,15 @@ class PlayViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupLayout()
+    setupActions()
+    presenter.startTimer()
   }
   
+}
+
+// MARK: - Actions
+extension PlayViewController {
+  @objc func addTap() {
+    presenter.addTap()
+  }
 }

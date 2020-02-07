@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3CE7D923ECA9E20017D260 /* DataProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3CE7D823ECA9E20017D260 /* DataProviderService.swift */; };
+		CC3CE7DF23ECC7A70017D260 /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3CE7DE23ECC7A70017D260 /* CongratulationViewController.swift */; };
+		CC3CE7E123ECC7FB0017D260 /* CongratulationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3CE7E023ECC7FA0017D260 /* CongratulationViews.swift */; };
+		CC3CE7E323ECC8120017D260 /* CongratulationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3CE7E223ECC8120017D260 /* CongratulationPresenter.swift */; };
 		CC8D776423E9FD5500E2F3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */; };
 		CC8D776623E9FD5500E2F3A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */; };
 		CC8D776823E9FD5500E2F3A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D776723E9FD5500E2F3A5 /* MainViewController.swift */; };
@@ -48,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC3CE7D823ECA9E20017D260 /* DataProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderService.swift; sourceTree = "<group>"; };
+		CC3CE7DE23ECC7A70017D260 /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
+		CC3CE7E023ECC7FA0017D260 /* CongratulationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViews.swift; sourceTree = "<group>"; };
+		CC3CE7E223ECC8120017D260 /* CongratulationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationPresenter.swift; sourceTree = "<group>"; };
 		CC8D776023E9FD5500E2F3A5 /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D776323E9FD5500E2F3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8D776523E9FD5500E2F3A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +108,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC3CE7D723ECA9C10017D260 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC3CE7D823ECA9E20017D260 /* DataProviderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CC3CE7DA23ECC6D00017D260 /* CongratulationModule */ = {
+			isa = PBXGroup;
+			children = (
+				CC3CE7DB23ECC6F70017D260 /* View */,
+				CC3CE7DC23ECC6FC0017D260 /* Presenter */,
+			);
+			path = CongratulationModule;
+			sourceTree = "<group>";
+		};
+		CC3CE7DB23ECC6F70017D260 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC3CE7E023ECC7FA0017D260 /* CongratulationViews.swift */,
+				CC3CE7DE23ECC7A70017D260 /* CongratulationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC3CE7DC23ECC6FC0017D260 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC3CE7E223ECC8120017D260 /* CongratulationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		CC8D775723E9FD5500E2F3A5 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +168,7 @@
 				CC8D778523EA04D900E2F3A5 /* Router.swift */,
 				CC8D778723EA07DA00E2F3A5 /* AssemblyModuleBuilder.swift */,
 				CC8D779C23EA176500E2F3A5 /* Helpers */,
+				CC3CE7D723ECA9C10017D260 /* Services */,
 				CC8D779123EA0CAD00E2F3A5 /* Views */,
 				CC8D778923EA08E300E2F3A5 /* Modules */,
 				CC8D776C23E9FD5700E2F3A5 /* Assets.xcassets */,
@@ -149,6 +192,7 @@
 			children = (
 				CC8D778A23EA08F300E2F3A5 /* MainModule */,
 				CCA2B06A23EAF8D80009F064 /* PlayModule */,
+				CC3CE7DA23ECC6D00017D260 /* CongratulationModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -418,9 +462,13 @@
 				CC8D77A423EA19A000E2F3A5 /* Labels.swift in Sources */,
 				CC8D776823E9FD5500E2F3A5 /* MainViewController.swift in Sources */,
 				CC8D776423E9FD5500E2F3A5 /* AppDelegate.swift in Sources */,
+				CC3CE7E123ECC7FB0017D260 /* CongratulationViews.swift in Sources */,
+				CC3CE7D923ECA9E20017D260 /* DataProviderService.swift in Sources */,
 				CCA2B07C23EB2B8F0009F064 /* Views.swift in Sources */,
 				CCA2B07023EAF9770009F064 /* PlayPresenter.swift in Sources */,
+				CC3CE7DF23ECC7A70017D260 /* CongratulationViewController.swift in Sources */,
 				CC8D776623E9FD5500E2F3A5 /* SceneDelegate.swift in Sources */,
+				CC3CE7E323ECC8120017D260 /* CongratulationPresenter.swift in Sources */,
 				CCA2B07223EAFB220009F064 /* PlayViews.swift in Sources */,
 				CC9A29AD23EA2ADC00E87BEE /* StackViews.swift in Sources */,
 			);

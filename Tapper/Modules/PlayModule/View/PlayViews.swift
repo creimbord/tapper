@@ -12,8 +12,8 @@ import UIKit
 struct PlayViews {
   // MARK: Views
   static let background = UIFactory.createImageView(name: .imageView, image: #imageLiteral(resourceName: "background.pdf"))
-  static let timeBox = UIFactory.createView(name: .labelBox, title: "Time", boxLabelTitle: "0:20", isFlipped: true)
-  static let tapsBox = UIFactory.createView(name: .labelBox, title: "Taps", boxLabelTitle: "0")
+  static let timeBox = UIFactory.createView(name: .labelBox, title: "Time", boxLabelTitle: "0:20", isFlipped: true) as! LabelBox
+  static let tapsBox = UIFactory.createView(name: .labelBox, title: "Taps", boxLabelTitle: "0") as! LabelBox
   static let buttonContainer = UIFactory.createContainer(name: .container)
   static let button = UIFactory.createButton(name: .buttonWithImageBackground, image: #imageLiteral(resourceName: "button_normal.pdf"), highlightedImage: #imageLiteral(resourceName: "button_highlighted.pdf"))
   
@@ -43,6 +43,13 @@ extension PlayViewController: PlayViewProtocol {
     setupBoxStackViewConstraints()
     setupButtonContainerConstraints()
     setupButtonConstraints()
+  }
+}
+
+// MARK: - Actions
+extension PlayViewController {
+  func setupActions() {
+    PlayViews.button.addTarget(self, action: #selector(addTap), for: .touchUpInside)
   }
 }
 

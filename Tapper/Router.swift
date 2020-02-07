@@ -16,6 +16,7 @@ protocol RouterMain {
 protocol RouterProtocol: RouterMain {
   func mainViewController()
   func playViewController()
+  func congratulationViewController(parentView: UIViewController)
 }
 
 class Router: RouterProtocol {
@@ -39,5 +40,11 @@ class Router: RouterProtocol {
       guard let playViewController = assemblyBuilder?.createPlayModule(router: self) else { return }
       navigationController.pushViewController(playViewController, animated: true)
     }
+  }
+  
+  func congratulationViewController(parentView: UIViewController) {
+    guard let congratulationViewController = assemblyBuilder?.createCongratulationModule(router: self) else { return }
+    congratulationViewController.modalPresentationStyle = .overCurrentContext
+    parentView.present(congratulationViewController, animated: true, completion: nil)
   }
 }

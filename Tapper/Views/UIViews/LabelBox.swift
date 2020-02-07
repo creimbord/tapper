@@ -9,13 +9,13 @@
 import UIKit
 
 class LabelBox: UIView {
-  var title: String
-  var boxLabelTitle: String
+  var titleLabel: UILabel
+  var boxLabel: UILabel
   var isFlipped: Bool
   
   init(title: String, boxLabelTitle: String, isFlipped: Bool) {
-    self.title = title
-    self.boxLabelTitle = boxLabelTitle
+    self.titleLabel = UIFactory.createLabel(name: .titleLabel, title: title)
+    self.boxLabel = UIFactory.createLabel(name: .boxLabel, title: boxLabelTitle)
     self.isFlipped = isFlipped
     super.init(frame: .zero)
     setupView()
@@ -26,20 +26,32 @@ class LabelBox: UIView {
   }
   
   // MARK: - Views
-  func setupView() {
-    let labelBox = UIFactory.createImageView(name: .imageView, image: #imageLiteral(resourceName: "label_box.pdf"))
-    let titleBox = UIFactory.createImageView(name: .imageView, image: #imageLiteral(resourceName: "title_box.pdf"))
-    let boxLabelContainer = UIFactory.createContainer(name: .container)
-    let boxLabel = UIFactory.createLabel(name: .boxLabel, title: boxLabelTitle)
-    let titleLabel = UIFactory.createLabel(name: .titleLabel, title: title)
-    
+  let labelBox = UIFactory.createImageView(name: .imageView, image: #imageLiteral(resourceName: "label_box.pdf"))
+  let titleBox = UIFactory.createImageView(name: .imageView, image: #imageLiteral(resourceName: "title_box.pdf"))
+  let boxLabelContainer = UIFactory.createContainer(name: .container)
+  
+  // MARK: - Setup View
+  private func setupView() {
     addSubview(labelBox)
     addSubview(titleBox)
     addSubview(boxLabelContainer)
     addSubview(boxLabel)
     addSubview(titleLabel)
-    
-    // Label Box Constraints
+    setupConstraints()
+  }
+  
+  private func setupConstraints() {
+    setupLabelBoxConstraints()
+    setupTitleBoxConstraints()
+    setupBoxLabelContainerConstraints()
+    setupBoxLabelConstraints()
+    setupTitleLabelConstraints()
+  }
+}
+
+// MARK: - Constraints
+extension LabelBox {
+  private func setupLabelBoxConstraints() {
     if isFlipped { labelBox.flipX() }
     labelBox.setAnchor(
       top: self.topAnchor,
@@ -51,12 +63,14 @@ class LabelBox: UIView {
       paddingBottom: 0,
       paddingRight: 0
     )
-    
-    // Title Box Constraints
+  }
+  
+  private func setupTitleBoxConstraints() {
     titleBox.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
     titleBox.centerXAnchor.constraint(equalTo: boxLabelContainer.centerXAnchor).isActive = true
-    
-    // Box Label Container Constraints
+  }
+  
+  private func setupBoxLabelContainerConstraints() {
     boxLabelContainer.setAnchor(
       top: titleBox.bottomAnchor,
       left: labelBox.leftAnchor,
@@ -67,12 +81,14 @@ class LabelBox: UIView {
       paddingBottom: -6,
       paddingRight: isFlipped ? 6 : 0
     )
-    
-    // Box Label Constraints
+  }
+  
+  private func setupBoxLabelConstraints() {
     boxLabel.centerXAnchor.constraint(equalTo: boxLabelContainer.centerXAnchor).isActive = true
     boxLabel.centerYAnchor.constraint(equalTo: boxLabelContainer.centerYAnchor).isActive = true
-    
-    // Box Label Constraints
+  }
+  
+  private func setupTitleLabelConstraints() {
     titleLabel.centerXAnchor.constraint(equalTo: titleBox.centerXAnchor).isActive = true
     titleLabel.centerYAnchor.constraint(equalTo: titleBox.centerYAnchor).isActive = true
   }
