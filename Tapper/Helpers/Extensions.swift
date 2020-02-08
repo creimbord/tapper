@@ -74,6 +74,17 @@ extension UIView {
   }
 }
 
+extension UIViewController {
+  func animatePop() {
+    let transition = CATransition()
+    transition.duration = 0.5
+    transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+    transition.type = CATransitionType.moveIn
+    transition.subtype = CATransitionSubtype.fromBottom
+    self.view.layer.add(transition, forKey: nil)
+  }
+}
+
 extension UIColor {
   static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
     return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
@@ -81,6 +92,10 @@ extension UIColor {
 }
 
 extension UIStackView {
+  func addSubviews(_ subviews: [UIView]) {
+    subviews.forEach { self.addArrangedSubview($0) }
+  }
+  
   func setSpacing(_ spacing: CGFloat...) {
     let range = 0...self.subviews.count - 2
     let subviews = self.subviews[range]

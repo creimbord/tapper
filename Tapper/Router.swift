@@ -43,7 +43,8 @@ class Router: RouterProtocol {
   }
   
   func congratulationViewController(parentView: UIViewController) {
-    guard let congratulationViewController = assemblyBuilder?.createCongratulationModule(router: self) else { return }
+    guard let congratulationViewController = assemblyBuilder?.createCongratulationModule() as? CongratulationViewController else { return }
+    congratulationViewController.delegate = parentView as? CongratulationViewControllerDelegate
     congratulationViewController.modalPresentationStyle = .overCurrentContext
     parentView.present(congratulationViewController, animated: true, completion: nil)
   }

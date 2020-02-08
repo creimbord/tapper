@@ -13,6 +13,9 @@ enum Labels {
   case mainButtonLabel
   case titleLabel
   case boxLabel
+  case congratulationLabel
+  case scoreTitleLabel
+  case scoreLabel
 }
 
 protocol Label {
@@ -68,6 +71,57 @@ class BoxLabel: Label {
     label.text = NSLocalizedString(title, comment: "Box label.")
     label.font = Fonts.boxLabelFont
     label.textColor = Colors.boxLabelColor
+  }
+  
+  func getLabel() -> UILabel {
+    return label
+  }
+}
+
+class CongratulationLabel: Label {
+  private let label = UILabel()
+  
+  init(title: String?) {
+    guard let title = title else { return }
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.textAlignment = .center
+    label.text = NSLocalizedString(title, comment: "Congratulation label.")
+    label.font = Fonts.congratulationLabelFont
+    label.textColor = Colors.congratulationLabelColor
+  }
+  
+  func getLabel() -> UILabel {
+    return label
+  }
+}
+
+class ScoreTitleLabel: Label {
+  private let label = UILabel()
+  
+  init(title: String?) {
+    guard let title = title else { return }
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.textAlignment = .center
+    label.text = NSLocalizedString(title, comment: "Score title label.")
+    label.font = Fonts.scoreTitleLabelFont
+    label.textColor = Colors.scoreTitleLabelColor
+  }
+  
+  func getLabel() -> UILabel {
+    return label
+  }
+}
+
+class ScoreLabel: Label {
+  private let label = UILabel()
+  
+  init(title: String?) {
+    guard let title = title else { return }
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.textAlignment = .center
+    label.text = NSLocalizedString(title, comment: "Score label.")
+    label.font = Fonts.scoreLabelFont
+    label.textColor = Colors.scoreLabelColor
   }
   
   func getLabel() -> UILabel {

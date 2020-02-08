@@ -22,8 +22,7 @@ protocol StackView {
 class VerticalStackView: StackView {
   private let stackView = UIStackView()
   
-  init(subviews: [UIView]) {
-    subviews.forEach { stackView.addArrangedSubview($0) }
+  init() {
     stackView.translatesAutoresizingMaskIntoConstraints = false
     stackView.isUserInteractionEnabled = true
     stackView.axis = .vertical
@@ -39,8 +38,7 @@ class VerticalStackView: StackView {
 class HorizontalStackView: StackView {
   private let stackView = UIStackView()
   
-  init(subviews: [UIView]) {
-    subviews.forEach { stackView.addArrangedSubview($0) }
+  init() {
     stackView.translatesAutoresizingMaskIntoConstraints = false
     stackView.isUserInteractionEnabled = true
     stackView.axis = .horizontal

@@ -11,7 +11,7 @@ import UIKit
 protocol AssemblyBuilder {
   func createMainModule(router: Router) -> UIViewController
   func createPlayModule(router: Router) -> UIViewController
-  func createCongratulationModule(router: Router) -> UIViewController
+  func createCongratulationModule() -> UIViewController
 }
 
 class AssemblyModuleBuilder: AssemblyBuilder {
@@ -30,10 +30,10 @@ class AssemblyModuleBuilder: AssemblyBuilder {
     return view
   }
   
-  func createCongratulationModule(router: Router) -> UIViewController {
+  func createCongratulationModule() -> UIViewController {
     let view = CongratulationViewController()
     let dataProviderService = DataProviderService()
-    let presenter = CongratulationPresenter(dataProviderService: dataProviderService, router: router)
+    let presenter = CongratulationPresenter(view: view, dataProviderService: dataProviderService)
     view.presenter = presenter
     return view
   }

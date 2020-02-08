@@ -9,9 +9,9 @@
 import UIKit
 
 class LabelBox: UIView {
-  var titleLabel: UILabel
-  var boxLabel: UILabel
-  var isFlipped: Bool
+  let titleLabel: UILabel
+  let boxLabel: UILabel
+  let isFlipped: Bool
   
   init(title: String, boxLabelTitle: String, isFlipped: Bool) {
     self.titleLabel = UIFactory.createLabel(name: .titleLabel, title: title)

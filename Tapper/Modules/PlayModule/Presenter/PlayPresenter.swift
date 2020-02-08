@@ -9,12 +9,16 @@
 import Foundation
 
 protocol PlayViewProtocol: AnyObject {
-  func setupLayout()
+  func toggleViews(_ gameIsFinished: Bool?)
+  func updateTimeLabel(_ timeRemaining: Int)
+  func updateTapsLabel(_ tapsCount: Int)
+  func dismissPresentedViewController()
 }
 
 protocol PlayViewPresenterProtocol: AnyObject {
   init(view: PlayViewProtocol, dataProviderService: DataProviderServiceProtocol, router: RouterProtocol)
-  func startTimer()
+  func startGame()
+  func resetGame()
   func addTap()
 }
 
@@ -27,7 +31,7 @@ class PlayPresenter: PlayViewPresenterProtocol {
   var timeRemaining = 20
   var tapsCount = 0
   var gameIsFinished: Bool? {
-    didSet { toggleViews() }
+    didSet { view.toggleViews(gameIsFinished) }
   }
   
   required init(view: PlayViewProtocol, dataProviderService: DataProviderServiceProtocol, router: RouterProtocol) {
@@ -36,13 +40,13 @@ class PlayPresenter: PlayViewPresenterProtocol {
     self.router = router
   }
   
-  func startTimer() {
+  func startGame() {
     timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
   }
   
   @objc func fireTimer(timer: Timer) {
     timeRemaining -= 1
-    updateTimeLabel()
+    view.updateTimeLabel(timeRemaining)
     
     if timeRemaining == 0 {
       finishGame()
@@ -52,17 +56,17 @@ class PlayPresenter: PlayViewPresenterProtocol {
   
   func addTap() {
     tapsCount += 1
-    PlayViews.tapsBox.boxLabel.text = "\(tapsCount)"
+    view.updateTapsLabel(tapsCount)
   }
   
-  private func updateTimeLabel() {
-    PlayViews.timeBox.boxLabel.text = {
-      return timeRemaining >= 10 ? "0:\(timeRemaining)" : "0:0\(timeRemaining)"
-    }()
-    
-    PlayViews.timeBox.boxLabel.textColor = {
-      return timeRemaining <= 5 ? Colors.boxLabelRedColor : Colors.boxLabelColor
-    }()
+  @objc func resetGame() {
+    timeRemaining = 20
+    tapsCount = 0
+    gameIsFinished = false
+    view.updateTimeLabel(timeRemaining)
+    view.updateTapsLabel(tapsCount)
+    view.dismissPresentedViewController()
+    startGame()
   }
   
   private func finishGame() {
@@ -77,11 +81,5 @@ class PlayPresenter: PlayViewPresenterProtocol {
       dataProviderService.saveScore(.bestScore, tapsCount)
     }
     dataProviderService.saveScore(.currentScore, tapsCount)
-  }
-  
-  func toggleViews() {
-    guard let gameIsFinished = gameIsFinished else { return }
-    PlayViews.boxStackView.isHidden = gameIsFinished ? true : false
-    PlayViews.button.isHidden = gameIsFinished ? true : false
   }
 }

@@ -13,8 +13,8 @@ protocol ViewsFactory {
   static func createButton(name: Buttons, title: String?, image: UIImage?, highlightedImage: UIImage?) -> UIButton
   static func createImageView(name: ImageViews, image: UIImage?) -> UIImageView
   static func createContainer(name: Containers) -> UIView
-  static func createStackView(name: StackViews, subviews: [UIView]) -> UIStackView
-  static func createView(name: Views, title: String, boxLabelTitle: String, isFlipped: Bool) -> UIView
+  static func createStackView(name: StackViews) -> UIStackView
+  static func createView(name: Views, title: String, boxLabelTitle: String, isFlipped: Bool?) -> UIView
 }
 
 class UIFactory: ViewsFactory {
@@ -23,6 +23,9 @@ class UIFactory: ViewsFactory {
     case .mainButtonLabel: return MainButtonLabel(title: title).getLabel()
     case .titleLabel: return TitleLabel(title: title).getLabel()
     case .boxLabel: return BoxLabel(title: title).getLabel()
+    case .congratulationLabel: return CongratulationLabel(title: title).getLabel()
+    case .scoreTitleLabel: return ScoreTitleLabel(title: title).getLabel()
+    case .scoreLabel: return ScoreLabel(title: title).getLabel()
     }
   }
   
@@ -55,12 +58,10 @@ class UIFactory: ViewsFactory {
     }
   }
   
-  static func createStackView(name: StackViews, subviews: [UIView]) -> UIStackView {
+  static func createStackView(name: StackViews) -> UIStackView {
     switch name {
-    case .verticalStackView:
-      return VerticalStackView(subviews: subviews).getStackView()
-    case .horizontalStackView:
-      return HorizontalStackView(subviews: subviews).getStackView()
+    case .verticalStackView: return VerticalStackView().getStackView()
+    case .horizontalStackView: return HorizontalStackView().getStackView()
     }
   }
   
@@ -68,11 +69,13 @@ class UIFactory: ViewsFactory {
     name: Views,
     title: String,
     boxLabelTitle: String,
-    isFlipped: Bool = false
+    isFlipped: Bool? = nil
   ) -> UIView {
     switch name {
     case .labelBox:
       return LabelBoxView(title: title, boxLabelTitle: boxLabelTitle, isFlipped: isFlipped).getView()
+    case .scoreBox:
+      return ScoreBoxView(title: title, boxLabelTitle: boxLabelTitle).getView()
     }
   }
 }
