@@ -16,7 +16,7 @@ protocol RouterMain {
 protocol RouterProtocol: RouterMain {
   func mainViewController()
   func playViewController()
-  func congratulationViewController(parentView: UIViewController)
+  func congratulationViewController(presentingView: PlayViewProtocol)
 }
 
 class Router: RouterProtocol {
@@ -42,10 +42,14 @@ class Router: RouterProtocol {
     }
   }
   
-  func congratulationViewController(parentView: UIViewController) {
+  func congratulationViewController(presentingView: PlayViewProtocol) {
     guard let congratulationViewController = assemblyBuilder?.createCongratulationModule() as? CongratulationViewController else { return }
-    congratulationViewController.delegate = parentView as? CongratulationViewControllerDelegate
+    
+    congratulationViewController.delegate = presentingView as? CongratulationViewControllerDelegate
     congratulationViewController.modalPresentationStyle = .overCurrentContext
-    parentView.present(congratulationViewController, animated: true, completion: nil)
-  }
+    
+    (presentingView as! UIViewController).present(congratulationViewController,
+                                                  animated: true,
+                                                  completion: nil)
+  }  
 }

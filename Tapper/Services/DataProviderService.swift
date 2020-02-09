@@ -15,7 +15,7 @@ enum Score {
 
 protocol DataProviderServiceProtocol {
   func getScore(_ score: Score) -> Int?
-  func saveScore(_ score: Score, _ Score: Int)
+  func saveScore(_ score: Score, _ result: Int)
 }
 
 class DataProviderService: DataProviderServiceProtocol {

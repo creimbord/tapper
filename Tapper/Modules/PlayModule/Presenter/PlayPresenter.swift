@@ -12,7 +12,7 @@ protocol PlayViewProtocol: AnyObject {
   func toggleViews(_ gameIsFinished: Bool?)
   func updateTimeLabel(_ timeRemaining: Int)
   func updateTapsLabel(_ tapsCount: Int)
-  func dismissPresentedViewController()
+  func closeCongratulation()
 }
 
 protocol PlayViewPresenterProtocol: AnyObject {
@@ -65,17 +65,21 @@ class PlayPresenter: PlayViewPresenterProtocol {
     gameIsFinished = false
     view.updateTimeLabel(timeRemaining)
     view.updateTapsLabel(tapsCount)
-    view.dismissPresentedViewController()
+    view.closeCongratulation()
     startGame()
   }
   
-  private func finishGame() {
+  func finishGame() {
     saveGameState()
     gameIsFinished = true
-    router.congratulationViewController(parentView: view as! PlayViewController)
+    showCongratulation()
   }
   
-  private func saveGameState() {
+  func showCongratulation() {
+    router.congratulationViewController(presentingView: view)
+  }
+  
+  func saveGameState() {
     let bestScore = dataProviderService.getScore(.bestScore)
     if bestScore == nil || tapsCount > bestScore! {
       dataProviderService.saveScore(.bestScore, tapsCount)

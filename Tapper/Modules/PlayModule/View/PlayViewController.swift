@@ -67,7 +67,7 @@ extension PlayViewController: PlayViewProtocol {
     tapsBox.boxLabel.text = "\(tapsCount)"
   }
   
-  func dismissPresentedViewController() {
+  func closeCongratulation() {
     presentedViewController?.dismiss(animated: true, completion: nil)
   }
 }
@@ -79,8 +79,8 @@ extension PlayViewController: CongratulationViewControllerDelegate {
   }
   
   func popToRoot() {
-    dismissPresentedViewController()
-    self.navigationController?.animatePop()
-    self.navigationController?.popToRootViewController(animated: false)
+    closeCongratulation()
+    navigationController?.animatePop()
+    navigationController?.popToRootViewController(animated: false)
   }
 }
