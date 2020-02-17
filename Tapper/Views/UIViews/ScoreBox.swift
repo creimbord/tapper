@@ -43,6 +43,14 @@ class ScoreBox: UIView {
   }
 }
 
+// MARK: - Methods
+extension ScoreBox {
+  func setTitle(title: String, color: UIColor = .white) {
+    scoreLabel.text = title
+    scoreLabel.textColor = color
+  }
+}
+
 // MARK: - Constraints
 extension ScoreBox {
   private func setupScoreBoxBackgroundConstraints() {

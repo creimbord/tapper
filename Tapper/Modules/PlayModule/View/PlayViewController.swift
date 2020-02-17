@@ -54,17 +54,19 @@ extension PlayViewController: PlayViewProtocol {
   }
   
   func updateTimeLabel(_ timeRemaining: Int) {
-    timeBox.boxLabel.text = {
+    let title: String = {
       return timeRemaining >= 10 ? "0:\(timeRemaining)" : "0:0\(timeRemaining)"
     }()
     
-    timeBox.boxLabel.textColor = {
+    let color: UIColor = {
       return timeRemaining <= 5 ? Colors.boxLabelRedColor : Colors.boxLabelColor
     }()
+    
+    timeBox.setTitle(title: title, color: color)
   }
   
   func updateTapsLabel(_ tapsCount: Int) {
-    tapsBox.boxLabel.text = "\(tapsCount)"
+    tapsBox.setTitle(title: "\(tapsCount)")
   }
   
   func closeCongratulation() {

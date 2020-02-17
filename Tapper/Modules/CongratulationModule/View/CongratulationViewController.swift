@@ -59,7 +59,7 @@ extension CongratulationViewController {
 // MARK: - CongratulationViewProtocol
 extension CongratulationViewController: CongratulationViewProtocol {
   func updateScoreLabels(with currentScore: Int, and bestScore: Int) {
-    currentScoreBox.scoreLabel.text = "\(currentScore)"
-    bestScoreBox.scoreLabel.text = "\(bestScore)"
+    currentScoreBox.setTitle(title: "\(currentScore)")
+    bestScoreBox.setTitle(title: "\(bestScore)")
   }
 }

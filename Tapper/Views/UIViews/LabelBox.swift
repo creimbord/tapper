@@ -49,6 +49,14 @@ class LabelBox: UIView {
   }
 }
 
+// MARK: - Methods
+extension LabelBox {
+  func setTitle(title: String, color: UIColor = .white) {
+    boxLabel.text = title
+    boxLabel.textColor = color
+  }
+}
+
 // MARK: - Constraints
 extension LabelBox {
   private func setupLabelBoxConstraints() {

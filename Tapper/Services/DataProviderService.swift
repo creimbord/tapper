@@ -18,7 +18,7 @@ protocol DataProviderServiceProtocol {
   func saveScore(_ score: Score, _ result: Int)
 }
 
-class DataProviderService: DataProviderServiceProtocol {
+final class DataProviderService: DataProviderServiceProtocol {
   func getScore(_ score: Score) -> Int? {
     switch score {
     case .currentScore:

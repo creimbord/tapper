@@ -63,7 +63,7 @@ class PlayViewControllerTests: XCTestCase {
   
   func testPopToRoot() {
     controller.popToRoot()
-    guard let firstViewController = controller.navigationController?.viewControllers.first else { return}
+    guard let firstViewController = controller.navigationController?.viewControllers.first else { return }
     XCTAssertNil(controller.presentedViewController)
     XCTAssertTrue(firstViewController is MainViewController)
   }

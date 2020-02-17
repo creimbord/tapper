@@ -19,7 +19,7 @@ protocol RouterProtocol: RouterMain {
   func congratulationViewController(presentingView: PlayViewProtocol)
 }
 
-class Router: RouterProtocol {
+final class Router: RouterProtocol {
   var navigationController: UINavigationController?
   var assemblyBuilder: AssemblyBuilder?
   

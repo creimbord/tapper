@@ -14,7 +14,7 @@ protocol AssemblyBuilder {
   func createCongratulationModule() -> UIViewController
 }
 
-class AssemblyModuleBuilder: AssemblyBuilder {
+final class AssemblyModuleBuilder: AssemblyBuilder {
   func createMainModule(router: Router) -> UIViewController {
     let view = MainViewController()
     let presenter = MainPresenter(router: router)
